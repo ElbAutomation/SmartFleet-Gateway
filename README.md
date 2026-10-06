@@ -1,5 +1,8 @@
 # SmartFleet Gateway
 
+Mehr zu SmartFleet: <https://smartfleetmanager.de> · Handbuch:
+<https://smartfleetmanager.de/docs/>
+
 Das SmartFleet Gateway ist ein Hutschienengerät mit 2 TE für den
 Schaltschrank. Es verbindet einen Loxone Miniserver vor Ort mit dem
 SmartFleet-Server des Loxone-Partners: Einrichtung über ein eigenes WLAN,
@@ -11,9 +14,6 @@ board (Fritzing project, schematic, Gerber files, bill of materials and build
 guide, in German).*
 
 ![Trägerplatine, Vorderseite](hardware/bilder/platine_vorderseite.png)
-
-Mehr zu SmartFleet: <https://smartfleetmanager.de> · Handbuch:
-<https://smartfleetmanager.de/docs/>
 
 ## Inhalt
 
