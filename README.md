@@ -45,6 +45,7 @@ oben rechts.
 | `hardware/bilder/` | Ansicht der Platine aus den Gerber-Dateien |
 | `hardware/bohrschablone.pdf` | Schablone für Gehäuse und Klemmenabdeckung, 1:1 drucken |
 | `hardware/steckbrettplan.png` | Aufbau als Prototyp auf dem Steckbrett |
+| `hardware/steckbrett_usb.fzz`, `hardware/steckbrett_usb.png` | kleinster Aufbau: nur XIAO und WIZ850io, Strom über USB |
 
 **Stand:** Entwurf V1.0. Die Maße stammen aus den Datenblättern; die Anprobe
 mit den echten Teilen steht noch aus. Vor dem Bestellen der Platine und vor
@@ -52,8 +53,8 @@ dem Schneiden am Gehäuse die Hinweise in der Bauanleitung beachten.
 
 ## Firmware
 
-`firmware/smartfleet-gateway-0.1.0-xiao-esp32s3.bin` ist ein vollständiges Image (Bootloader, Partitionstabelle,
-Anwendung) für den XIAO ESP32S3 Plus auf der Trägerplatine, Version 0.1.0.
+`firmware/smartfleet-gateway-1.0.0-xiao-esp32s3.bin` ist ein vollständiges Image (Bootloader, Partitionstabelle,
+Anwendung) für den XIAO ESP32S3 Plus auf der Trägerplatine, Version 1.0.0.
 Es wird ab Adresse `0x0` geschrieben.
 
 **Im Browser** (Chrome oder Edge): <https://espressif.github.io/esptool-js/>
@@ -63,7 +64,7 @@ angeben, *Program*.
 **Mit esptool:**
 
 ```sh
-esptool.py --chip esp32s3 write_flash 0x0 smartfleet-gateway-0.1.0-xiao-esp32s3.bin
+esptool.py --chip esp32s3 write_flash 0x0 smartfleet-gateway-1.0.0-xiao-esp32s3.bin
 ```
 
 Erkennt der Rechner den XIAO nicht: BOOT-Taster halten, USB-C einstecken,

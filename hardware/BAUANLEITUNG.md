@@ -135,6 +135,31 @@ Projektdatei `traegerplatine.fzz` enthält dieselbe Ansicht in Fritzing.
   − in Spalte 4) statt über die Klemme J1. Ob deren Stifte in die Kontakte
   deines Steckbretts passen, hängt vom Brett ab.
 
+### Nur XIAO und WIZ850io, Versorgung über USB
+
+`steckbrett_usb.fzz` (Bild: `steckbrett_usb.png`) zeigt den kleinsten Aufbau ohne 24-V-Teil: Strom
+kommt über USB-C am XIAO, das WIZ850io hängt an dessen 3V3-Pin. Die Signale
+liegen auf denselben Pins wie auf der Platine, die Firmware mit dem Profil
+`sdkconfig.board.traegerplatine` läuft unverändert.
+
+| XIAO | WIZ850io |
+|---|---|
+| D10 | J1-5 SCSn |
+| D9 | J1-4 SCLK |
+| D8 | J1-3 MOSI |
+| D1 | J2-6 MISO |
+| D0 | J2-5 RSTn |
+| D3 | J1-6 INTn |
+| 3V3 | J2-2, J2-3 |
+| GND | J1-1, J1-2, J2-1 |
+
+- **Schienen:** GND an den blauen Linien, 3,3 V an den roten; die Brücken in
+  Spalte 3 verbinden oben und unten. Hat dein Brett in der Mitte geteilte
+  Schienen, gilt das nur für die linke Hälfte, und die reicht.
+- Für den 3V3-Ausgang des XIAO nennt Seeed keinen Höchststrom. Startet das
+  Gerät unter Last neu (Brownout im Log), das WIZ850io über einen eigenen
+  MCP1702 am 5V-Pin des XIAO versorgen, wie auf der Platine.
+
 ## Stückliste
 
 | Bez. | Anz. | Teil | Wert | Hersteller-Nr. | Bemerkung | Reichelt |
